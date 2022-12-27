@@ -1,0 +1,124 @@
+ 
+% Last Updated: 05/31/2021, Hongli Zhao 
+% Please feel free to contribute to this LaTeX template file for our group use, which has many notations in math (especially real % analysis and linear algebra) and statistics defined.
+
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{physics}
+\usepackage{dsfont}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+%=====linear algebra and general math notations
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\nn}{\mathbb{N}}
+\newcommand{\cc}{\mathbb{C}}
+\usepackage[final]{pdfpages}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\ntoinf}[1]{\lim_{{#1}\rightarrow \infty}}
+\newcommand{\re}{\mathrm{Re}}
+\newcommand{\im}{\mathrm{Im}}
+\newcommand{\infnorm}[1]{\norm{#1}_{\infty}}
+\newcommand{\twonorm}[1]{\norm{#1}_{2}}
+\newcommand{\onenorm}[1]{\norm{#1}_{1}}
+\newcommand{\iprod}[1]{\langle #1 \rangle}
+\newcommand{\generalmatrixA}{
+	\begin{pmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n} \\
+		a_{21} & a_{22} & \cdots & a_{2n} \\
+		\vdots & \vdots & \ddots & \vdots \\
+		a_{n1} & a_{n2} & \cdots & a_{nn} \\
+	\end{pmatrix}
+}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+%=====
+%===== probability theory and random processes
+\newcommand{\expect}[1]{\mathbb{E}\big[ {#1} \big]}
+\newcommand{\cov}[1]{\mathbb{C}ov({#1})}
+\newcommand{\pp}[1]{\mathbb{P}({#1})}
+\newcommand{\variance}[1]{\mathbb{V}ar\big[{#1}\big]}
+%=====
+%===== PDE theory
+\newcommand{\intervoo}[2]{(#1, #2)}
+\newcommand{\intervcc}[2]{\big[ #1, #2\big]}
+\newcommand{\pdx}[1]{\frac{\partial}{\partial {#1}}}
+\newcommand{\pddx}[1]{\frac{\partial^2}{\partial {#1}^2}}
+\newcommand{\uno}{\large \textcircled{\small{1}}}
+\newcommand{\dos}{\large\textcircled{\small{2}}}
+\newcommand{\tres}{\large\textcircled{\small{3}}}
+\newcommand{\yonn}{\large\textcircled{\small{4}}} % 4 in Japanese
+\newcommand{\cancels}[1]{\underbrace{#1}_\textrm{cancelled}}
+\newcommand{\overcomment}[1]{\overbrace{}^{#1}}
+\newcommand{\ka}{\kappa}
+\newcommand{\ga}{\gamma}
+\newcommand{\uu}[2]{U_{#1}^{#2}} % shorthand
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\1}[1]{\mathds{1}\left[#1\right]}
+\newcommand{\hrzline}{\begin{center}
+\noindent\rule{8cm}{0.4pt}
+\end{center}}
+
+% short hand
+\newcommand{\eps}{\epsilon}
+\newcommand{\sig}{\sigma}
+% creating figures
+\newcommand{\addfigure}[2]{\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm]{#1}
+	\caption{#2}
+\end{figure}}
+
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\arccoth}{arccoth} 
+%=====
+% citations and pics
+
+\usepackage[utf8]{inputenc}
+\usepackage{biblatex}
+\usepackage{graphicx}
+\usepackage[left]{lineno}
+\lstset{
+  basicstyle=\ttfamily,
+  mathescape
+}
+%=====
+\linenumbers
+\author{}
+\title{}
+\date{\today}
+
+% custom block of texts
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+
+%\theoremstyle{definition}
+%\newtheorem{definition}[theorem]{Definition}
+%\newtheorem{example}[theorem]{Example}
+%\newtheorem{xca}[theorem]{Exercise}
+
+%\theoremstyle{remark}
+%\newtheorem{remark}[theorem]{Remark}
+% page style
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\lhead{}
+\rfoot{Page \thepage}
+
